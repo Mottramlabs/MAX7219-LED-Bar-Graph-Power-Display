@@ -13,7 +13,7 @@ Included are a couple of demo sketches one for each display board. Below are the
 The boards were designed to display house mains power usage but may have many other uses.
 
 ### Bar Graph Display Type B - General Purpose Connections
-![Display-Type-B](https://github.com/Mottramlabs/Test/blob/master/Pictures/Type%20B%20Front.jpg?raw=true)
+![Display-Type-B](https://github.com/Mottramlabs/MAX7219-LED-Bar-Graph-Power-Display/blob/master/Pictures/Type%20B%20Front.jpg?raw=true)
 
 ### Bar Graph Display Type C - Wemos D1 Mini Version
-![Display-Type-B](https://github.com/Mottramlabs/Test/blob/master/Pictures/Type%20C%20Front.jpg?raw=true)
+![Display-Type-B](https://github.com/Mottramlabs/MAX7219-LED-Bar-Graph-Power-Display/blob/master/Pictures/Type%20C%20Front.jpg?raw=true)
