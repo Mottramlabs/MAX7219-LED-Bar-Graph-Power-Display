@@ -20,9 +20,10 @@
 // SPI library needed for the MAX7219 library
 #include <SPI.h>
 #include <MAX7219_Digits.h>
-#define MAX7219_CS 10                  // CS pin used on Arduino
-MAX7219_Digit My_Display(MAX7219_CS); // Make an instance of MAX7219_Digit called My_Display and set CS pin
+#define MAX7219_CS 10                   // CS pin used on Arduino
+MAX7219_Digit My_Display(MAX7219_CS);   // Make an instance of MAX7219_Digit called My_Display and set CS pin
 
+// There are 16 LED's in the bar display the array below is 0-17 where 0 (all off) to 17 (all on)
 int Bar_1[17] {0, 128, 192, 224, 240, 248, 252, 254, 255, 255, 255, 255, 255, 255, 255, 255, 255};
 int Bar_2[17] {0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 192, 224, 240, 248, 252, 254, 255};
 
@@ -34,10 +35,9 @@ void setup(void) {
 
   Serial.begin(115200); Serial.println(""); Serial.println("Clackin!");
 
-
   // startup display and LED test
-  My_Display.Begin();         // Set's all the registers and clears the display
-  My_Display.Brightness(15);   // Set brightness 0-15
+  My_Display.Begin();           // Set's all the registers and clears the display
+  My_Display.Brightness(15);    // Set brightness 0-15
 
   tone(Speaker, 4000, 100);
 
@@ -65,12 +65,10 @@ void loop() {
 
     } // bar loop
 
-
   } // end of bar test
 
   My_Display.Begin();         // Set's all the registers and clears the display
   delay(1000);
-
 
   My_Display.MAX7219_Write(7, 128);
   delay(500);
@@ -90,13 +88,11 @@ void loop() {
 
   // brightness test
   for (int aa = 0; aa < 16; aa++) {
-    My_Display.Brightness(aa);   // Set brightness 0-15
+    My_Display.Brightness(aa);    // Set brightness 0-15
     delay(500);
   } // end brightness test
 
   delay(500);
-  My_Display.Begin();         // Set's all the registers and clears the display
+  My_Display.Begin();             // Set's all the registers and clears the display
 
 }// end of loop
-
-
